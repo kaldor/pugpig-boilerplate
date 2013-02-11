@@ -1,4 +1,4 @@
 pugpig-boilerplate
 ==================
 
-Opinionated In house template for working on static Pugpig Templates
+Opinionated template for working on static Pugpig Templates
