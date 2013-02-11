@@ -19,10 +19,10 @@ module.exports = function( grunt ) {
     coffee: {
       compile: {
         files: {
-          'temp/scripts/*.js': 'app/scripts/**/*.coffee'
+          'temp/js/*.js': 'app/js/**/*.coffee'
         },
         options: {
-          basePath: 'app/scripts'
+          basePath: 'app/js'
         }
       }
     },
@@ -51,21 +51,21 @@ module.exports = function( grunt ) {
     // default watch configuration
     watch: {
       coffee: {
-        files: 'app/scripts/**/*.coffee',
+        files: 'app/js/**/*.coffee',
         tasks: 'coffee reload'
       },
       compass: {
         files: [
-          'app/styles/**/*.{scss,sass}'
+          'app/css/**/*.{scss,sass}'
         ],
         tasks: 'compass reload'
       },
       reload: {
         files: [
           'app/*.html',
-          'app/styles/**/*.css',
-          'app/scripts/**/*.js',
-          'app/images/**/*'
+          'app/css/**/*.css',
+          'app/js/**/*.js',
+          'app/img/**/*'
         ],
         tasks: 'reload'
       },
@@ -82,7 +82,7 @@ module.exports = function( grunt ) {
     lint: {
       files: [
         'Gruntfile.js',
-        'app/scripts/**/*.js',
+        'app/js/**/*.js',
         'spec/**/*.js'
       ]
     },
@@ -127,14 +127,14 @@ module.exports = function( grunt ) {
 
     // concat css/**/*.css files, inline @import, output a single minified css
     css: {
-      'styles/main.css': ['styles/**/*.css']
+      'css/main.css': ['css/**/*.css']
     },
 
     // renames JS/CSS to prepend a hash of their contents for easier
     // versioning
     rev: {
-      js: 'scripts/**/*.js',
-      css: 'styles/**/*.css',
+      js: 'js/**/*.js',
+      css: 'css/**/*.css',
       img: 'images/**'
     },
 
@@ -170,7 +170,7 @@ module.exports = function( grunt ) {
     rjs: {
       // no minification, is done by the min task
       optimize: 'none',
-      baseUrl: './scripts',
+      baseUrl: './js',
       wrap: true,
       name: 'main'
     },
