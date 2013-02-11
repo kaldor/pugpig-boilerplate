@@ -12,3 +12,4 @@ Thumbs.db
 .sass-cache/
 dist/
 temp/
+node_modules/
