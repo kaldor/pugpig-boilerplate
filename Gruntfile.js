@@ -71,6 +71,12 @@ module.exports = function( grunt ) {
           'app/images/**/*'
         ],
         tasks: 'reload'
+      },
+      htmllint: {
+        files: [
+          'app/*.html'
+        ],
+        tasks: 'htmllint'
       }
     },
 
@@ -171,7 +177,12 @@ module.exports = function( grunt ) {
       wrap: true,
       name: 'main'
     },
+    htmllint: {
+      all: ['**/*.html']
+    }
   });
+
+  grunt.loadNpmTasks('grunt-html');
 
   // Alias the `test` task to run the `mocha` task instead
   grunt.registerTask('test', 'mocha');
