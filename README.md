@@ -20,7 +20,7 @@ Once Yeoman is the only thing that the Yeoman environment check says you do not 
 
 npm install -g yeoman
 
-Before trying to use any Yeoman commands within the project, you will need to run:
+Before trying to use any Yeoman commands within the project, you will need to run this command inside the boilerplate folder:
 
 npm install
 
