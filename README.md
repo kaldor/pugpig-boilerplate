@@ -10,11 +10,11 @@ Usage requirements:
 * optipng - brew install optipng
 * nodejs - http://nodejs.org/
 * npm - included with nodejs
-* * PhantomJS - npm install -g phantomjs
+* PhantomJS - npm install -g phantomjs
 * Ruby - installed by default on OSX
 * Compass - gem install compass
 * Compass Normalize - gem install compass-normalize
-* * Yeoman - http://yeoman.io/index.html check your setup is ready by typing: curl -L get.yeoman.io | bash
+* Yeoman - http://yeoman.io/index.html check your setup is ready by typing: curl -L get.yeoman.io | bash
 
 Once Yeoman is the only thing that the Yeoman environment check says you do not have, run:
 
