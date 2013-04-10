@@ -60,3 +60,8 @@ Run functional tests
 You can run your functional tests by running the following command in the project folder
 
 ```casperjs test test/functional```
+
+View Code Coverage reports
+---
+
+Your Code Coverage reports can be found in the coverage folder. These are generated automatically by Istanbul when Karma runs your tests.
