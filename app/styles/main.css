@@ -375,3 +375,8 @@ table {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/pugpig-boilerplate\/app\/styles\/_reset\.sass}line{font-family:\0000313}}
+body {
+  background: white;
+}
