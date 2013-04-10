@@ -16,7 +16,7 @@ Dependencies:
 ```gem install compass```
 * Compass Normalize
 ```gem install compass-normalize```
-* Yeoman - http://yeoman.io/index.html To install type
+* Yeoman - http://yeoman.io/index.html
 ```npm install -g yo grunt-cli bower```
 
 Install node / bower dependencies
