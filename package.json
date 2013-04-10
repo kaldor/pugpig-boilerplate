@@ -1,9 +1,0 @@
-{
-  "author": "markj",
-  "name": "pugpig-boilerplate",
-  "version": "0.1.0",
-  "dependencies": {},
-  "devDependencies": {
-    "grunt-html": "~0.2.1"
-  }
-}
