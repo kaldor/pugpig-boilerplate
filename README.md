@@ -19,12 +19,14 @@ Dependencies:
 * Yeoman - http://yeoman.io/index.html
 ```npm install -g yo grunt-cli bower```
 
-Install node / bower dependencies
+First step
 ---
 
 The first thing you should do is cd into the project folder and run
 
 ```npm install && bower install```
+
+This will install all node and bower dependencies for the project.
 
 Start development server
 ---
