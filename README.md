@@ -48,7 +48,7 @@ This will open (by default) PhantomJS and run all of your tests each time a file
 
 If you wish to stop Karma from running, run
 
-```fg```
+```fg ```
 
 Then kill the task using CTRL + C.
 
