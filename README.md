@@ -9,7 +9,7 @@ Dependencies:
 * nodejs - http://nodejs.org/
 * PhantomJS
 ```npm install -g phantomjs```
-* CasperJS - http://casperjs.org/
+* CasperJS - http://casperjs.org/ - install using homebrew
 * Karma
 ```npm install -g karma```
 * Compass
