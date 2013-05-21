@@ -1,0 +1,20 @@
+/**
+ * PLACEHOLDERS
+ */
+
+%clickable
+  cursor: pointer
+
+%ir
+  text-indent: 100%
+  white-space: nowrap
+  overflow: hidden
+
+%ha
+  @each $prefix in $prefixes
+    #{$prefix}-transform: translate3d( 0, 0, 0 )
+  transform: translate3d( 0, 0, 0 )
+
+%no-margin-padding
+  margin: 0
+  padding: 0
