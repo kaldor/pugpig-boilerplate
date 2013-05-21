@@ -15,3 +15,10 @@
   @each $prefix in $prefixes
     #{$prefix}-transform: $arguments
   transform: $arguments
+
+=font-face($name, $local, $url, $format)
+  @font-face
+    font-weight: normal
+    font-style: normal
+    font-family: quote($name)
+    src: local(quote($local)), $url format(quote($format))

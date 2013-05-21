@@ -18,3 +18,14 @@
 %no-margin-padding
   margin: 0
   padding: 0
+
+%clearfix
+  &:before, &:after
+    content: " "
+    display: table
+  &:after
+    clear: both
+
+%scrollable
+  overflow: scroll
+  -webkit-overflow-scrolling: touch
