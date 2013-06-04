@@ -1,6 +1,8 @@
 require 'compass-normalize'
 
-css_dir = 'app/styles'
-sass_dir = 'app/styles'
-images_dir = 'app/images'
-javascripts_dir = 'temp/scripts'
+app_dir = 'app'
+
+css_dir = "#{app_dir}/styles"
+sass_dir = "#{app_dir}/styles"
+images_dir = "#{app_dir}/images"
+javascripts_dir = "temp/scripts"
