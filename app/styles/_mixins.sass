@@ -6,10 +6,12 @@
   overflow-#{$axis}: scroll
   -webkit-overflow-scrolling: touch
 
-=transition( $arguments... )
+=transition( $transition, $hardware-accelerate: true )
   @each $prefix in $prefixes
-    #{$prefix}-transition: $arguments
-  transition: $arguments
+    #{$prefix}-transition: $transition
+  transition: $transition
+  @if $hardware-accelerate
+    @extend %ha
 
 =transform( $arguments... )
   @each $prefix in $prefixes
