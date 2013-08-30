@@ -2,14 +2,31 @@
  * MIXINS
  */
 
+$tablet-landscape: 1024px
+$tablet-portrait: 768px
+$wide-layout: 600px
+
+=respond-to($media)
+  @if $media == tablet-landscape
+    /* Landscape tablet and desktop */
+    @media only screen and (min-width : $tablet-landscape)
+      @content
+  @else if $media == tablet-portrait
+    /* Landscape phone to portrait tablet */
+    @media only screen and (max-width : $tablet-portrait)
+      @content
+  @else if $media == wide-layout
+    @media only screen and (min-width : $wide-layout)
+      @content
+
 =scrollable( $axis )
   overflow-#{$axis}: scroll
   -webkit-overflow-scrolling: touch
 
 =transition( $transition, $hardware-accelerate: true )
   @each $prefix in $prefixes
-    #{$prefix}-transition: $transition
-  transition: $transition
+    #{$prefix}-transition: unquote($transition)
+  transition: unquote($transition)
   @if $hardware-accelerate
     @extend %ha
 
@@ -18,9 +35,24 @@
     #{$prefix}-transform: $arguments
   transform: $arguments
 
-=font-face($name, $local, $url, $format)
-  @font-face
-    font-weight: normal
-    font-style: normal
-    font-family: quote($name)
-    src: local(quote($local)), url($url) format(quote($format))
+=filter( $arguments... )
+  @each $prefix in $prefixes
+    #{$prefix}-filter: $arguments
+  filter: $arguments
+
+=circle( $radius )
+  display: block
+  width: $radius
+  height: $radius
+  border-radius: $radius
+
+=square( $size )
+  width: $size
+  height: $size
+
+=clearfix
+  &:before, &:after
+    content: " "
+    display: table
+  &:after
+    clear: both
