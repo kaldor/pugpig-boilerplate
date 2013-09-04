@@ -9,7 +9,7 @@ files = [
   REQUIRE_ADAPTER,
 
   {pattern: 'test/lib/*.js', included: false},
-  {pattern: 'app/components/*/*.js', included: false},
+  {pattern: 'app/bower_components/*/*.js', included: false},
   {pattern: 'app/scripts/**/*.js', included: false},
   {pattern: 'test/unit/**/*.test.js', included: false},
 

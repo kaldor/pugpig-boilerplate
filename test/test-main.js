@@ -5,7 +5,6 @@ var tests = Object.keys(window.__karma__.files).filter(function (file) {
 require.config({
   baseUrl: '/base',
   paths: {
-    jquery: 'app/components/jquery/jquery',
     chai: 'test/lib/chai',
     sinon: 'test/lib/sinon'
   },

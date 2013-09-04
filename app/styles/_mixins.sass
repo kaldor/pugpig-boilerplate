@@ -2,6 +2,11 @@
  * MIXINS
  */
 
+$increment-from: null
+$increment-to: null
+$increment-from-px: null
+$increment-to-px: null
+
 $tablet-landscape: 1024px
 $tablet-portrait: 768px
 $wide-layout: 600px
@@ -49,7 +54,11 @@ $wide-layout: 600px
 =square( $size )
   width: $size
   height: $size
+<<<<<<< Updated upstream
   
+=======
+
+>>>>>>> Stashed changes
 =triangle( $size, $direction, $color )
   $half-size: $size / 2
   width: 0
@@ -91,3 +100,22 @@ $wide-layout: 600px
     display: table
   &:after
     clear: both
+
+=respond-to-incremental-range( $from, $to, $increment, $dimension )
+
+  $increment-from: $from
+  $increment-to: $from + $increment
+
+  @while $increment-to <= $to
+    $increment-from-px: $increment-from + px
+    $increment-to-px: $increment-to + px
+    @content
+    $increment-from: $increment-from + $increment
+    $increment-to: $increment-from + $increment
+
+=font-face($name, $local, $url, $format)
+  @font-face
+    font-weight: normal
+    font-style: normal
+    font-family: quote($name)
+    src: local(quote($local)), $url format(quote($format))
