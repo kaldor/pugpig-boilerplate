@@ -341,7 +341,7 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'concurrent:server',
-            'autoprefixer',
+            // 'autoprefixer',
             'connect:livereload',
             'open',
             'watch'
@@ -351,7 +351,7 @@ module.exports = function (grunt) {
     grunt.registerTask('test', [
         'clean:server',
         'concurrent:test',
-        'autoprefixer',
+        // 'autoprefixer',
         'connect:test',
         'mocha'
     ]);
@@ -360,7 +360,7 @@ module.exports = function (grunt) {
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',
-        'autoprefixer',
+        // 'autoprefixer',
         // 'requirejs',
         'concat',
         'cssmin',
