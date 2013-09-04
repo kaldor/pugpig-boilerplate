@@ -49,6 +49,41 @@ $wide-layout: 600px
 =square( $size )
   width: $size
   height: $size
+  
+=triangle( $size, $direction, $color )
+  $half-size: $size / 2
+  width: 0
+  height: 0
+  border-bottom: $size solid $color
+  border-left: $size solid transparent
+  @if $direction == "up"
+    border-left: $half-size solid transparent
+    border-right: $half-size solid transparent
+    border-bottom: $size solid $color
+  @if $direction == "down"
+    border-left: $half-size solid transparent
+    border-right: $half-size solid transparent
+    border-top: $size solid $color
+  @if $direction == "left"
+    border-top: $half-size solid transparent
+    border-right: $size solid $color
+    border-bottom: $half-size solid transparent
+  @if $direction == "right"
+    border-top: $half-size solid transparent
+    border-left: $size solid $color
+    border-bottom: $half-size solid transparent
+  @if $direction == "topleft"
+    border-top: $size solid $color
+    border-right: $size solid transparent
+  @if $direction == "topright"
+    border-top: $size solid $color
+    border-left: $size solid transparent
+  @if $direction == "bottomright"
+    border-bottom: $size solid $color
+    border-left: $size solid transparent
+  @if $direction == "bottomleft"
+    border-bottom: $size solid $color
+    border-right: $size solid transparent
 
 =clearfix
   &:before, &:after
