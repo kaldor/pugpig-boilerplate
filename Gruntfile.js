@@ -21,7 +21,7 @@ module.exports = function (grunt) {
     // configurable paths
     var yeomanConfig = {
         app: 'app',
-        dist: 'dist/pugpig-fourfourtwo-static'
+        dist: 'dist'
     };
 
     grunt.initConfig({
