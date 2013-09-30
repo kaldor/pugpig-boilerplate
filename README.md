@@ -10,14 +10,12 @@ Dependencies:
 * PhantomJS
 ```npm install -g phantomjs```
 * CasperJS - http://casperjs.org/ - install using homebrew
-* Karma
-```npm install -g karma```
 * Compass
 ```gem install compass```
 * Compass Normalize
 ```gem install compass-normalize```
 * Yeoman - http://yeoman.io/index.html
-```npm install -g yo grunt-cli bower```
+```npm install -g yo```
 
 First step
 ---
@@ -37,7 +35,7 @@ To start your development server, run the following command in the project folde
 
 This will open the site in your default browser. It will reload every time you save.
 
-Run unit tests
+Run unit tests (needs updating)
 ---
 
 You can run your unit tests by running the following command in the project folder
@@ -54,7 +52,7 @@ If you wish to stop Karma from running, run
 
 Then kill the task using CTRL + C.
 
-Run functional tests
+Run functional tests (needs updating)
 ---
 
 You can run your functional tests by running the following command in the project folder
