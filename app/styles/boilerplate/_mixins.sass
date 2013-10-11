@@ -7,21 +7,21 @@ $increment-to: null
 $increment-from-px: null
 $increment-to-px: null
 
-$tablet-landscape: 1024px
-$tablet-portrait: 768px
-$wide-layout: 600px
+$wide: 1024px
+$medium: 640px
 
 =respond-to($media)
-  @if $media == tablet-landscape
+  @if $media == wide-and-up
     /* Landscape tablet and desktop */
-    @media only screen and (min-width : $tablet-landscape)
+    @media only screen and (min-width : $wide)
       @content
-  @else if $media == tablet-portrait
+  @else if $media == medium-and-up
     /* Landscape phone to portrait tablet */
-    @media only screen and (max-width : $tablet-portrait)
+    @media only screen and (min-width : $medium)
       @content
-  @else if $media == wide-layout
-    @media only screen and (min-width : $wide-layout)
+  @else if $media == medium-and-down
+    /* Landscape phone to portrait tablet */
+    @media only screen and (max-width : $medium - 1)
       @content
 
 =scrollable( $axis )
@@ -55,12 +55,15 @@ $wide-layout: 600px
   width: $size
   height: $size
 
+=diamond( $size, $backgroundColor )
+  +square( $size )
+  +transform( rotate(45deg) )
+  background: $backgroundColor
+
 =triangle( $size, $direction, $color )
   $half-size: $size / 2
   width: 0
   height: 0
-  border-bottom: $size solid $color
-  border-left: $size solid transparent
   @if $direction == "up"
     border-left: $half-size solid transparent
     border-right: $half-size solid transparent
